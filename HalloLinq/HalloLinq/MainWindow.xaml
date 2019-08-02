@@ -1,0 +1,30 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HalloLinq"
+        mc:Ignorable="d" Language="de"
+        Title="MainWindow" Height="450" Width="600">
+    <DockPanel>
+        <WrapPanel DockPanel.Dock="Top" Margin="8">
+            <Button Click="LadeAlles">Lade alles</Button>
+            <Button Click="AlleDieMehrAls7FingerHaben">AlleDieMehrAls7FingerHaben</Button>
+            <Button Click="AlleDieMehrAls7FingerHabenLAMBDA">AlleDieMehrAls7FingerHaben LAMDA</Button>
+            <Button Click="SelectName">Select Name</Button>
+            <Button Click="EmpsByYearIntoBaum">Emps by Year into Baum </Button>
+            <Button Click="DerErsteTjark">Der erste Tjark</Button>
+            <Button Click="NurMitCorvette">Alle mit Corvette (Any)</Button>
+        </WrapPanel>
+        <TabControl            >
+            <TabItem Header="Grid">
+                <DataGrid x:Name="myGrid"/>
+
+            </TabItem>
+            <TabItem Header="Baum">
+                <TreeView x:Name="mytree"/>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+
+</Window>
