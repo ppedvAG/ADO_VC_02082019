@@ -15,6 +15,7 @@
             <Button Click="EmpsByYearIntoBaum">Emps by Year into Baum </Button>
             <Button Click="DerErsteTjark">Der erste Tjark</Button>
             <Button Click="NurMitCorvette">Alle mit Corvette (Any)</Button>
+            <Button Click="Excel">Excel export</Button>
         </WrapPanel>
         <TabControl            >
             <TabItem Header="Grid">

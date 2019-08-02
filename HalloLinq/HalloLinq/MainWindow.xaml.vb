@@ -1,6 +1,7 @@
 ﻿Imports System.Globalization
 Imports System.Threading
 Imports Bogus
+Imports OfficeOpenXml
 
 Class MainWindow
 
@@ -145,6 +146,22 @@ Class MainWindow
 
         myGrid.ItemsSource = query.ToList()
 
+
+    End Sub
+
+    Private Sub Excel(sender As Object, e As RoutedEventArgs)
+        Dim pack = New ExcelPackage(New IO.FileInfo("daten.xlsx"))
+        Dim ws = pack.Workbook.Worksheets.FirstOrDefault()
+        If ws Is Nothing Then
+            ws = pack.Workbook.Worksheets.Add("Dings")
+        End If
+        For index = 1 To 10
+
+            ws.Cells("A1").Value = "HaLLO"
+            ws.Cells(index + 1, 1).Value = $"{index} AA"
+
+        Next
+        pack.Save()
 
     End Sub
 End Class
